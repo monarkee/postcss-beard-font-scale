@@ -4,24 +4,24 @@ var fs = require('fs')
 var plugin = require('./')
 
 function run(fixture, opts) {
-    var expected = fs.readFileSync(fixture, 'utf-8')
+  var expected = fs.readFileSync(fixture, 'utf-8')
 
-    return postcss([plugin(opts)]).process('').then(result => {
-        expect(result.css).toEqual(expected.trim())
-        expect(result.warnings().length).toBe(0)
-    })
+  return postcss([plugin(opts)]).process('').then(result => {
+    expect(result.css).toEqual(expected.trim())
+    expect(result.warnings().length).toBe(0)
+  })
 }
 
 it('it creates classes from a font-scale config', () => {
-    return run('fixture.css', {
-        breakpoints: {
-            sm: '(min-width: 300px)',
-            lg: '(min-width: 900px)',
-        },
-        fontScale: {
-            ft1: '13px',
-            ft2: '15px',
-            ft3: '18px',
-        },
-    })
+  return run('fixture.css', {
+    breakpoints: {
+      sm: '(min-width: 300px)',
+      lg: '(min-width: 900px)',
+    },
+    fontScale: {
+      ft1: '13px',
+      ft2: '15px',
+      ft3: '18px',
+    },
+  })
 })
