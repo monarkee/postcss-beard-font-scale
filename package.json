@@ -1,6 +1,6 @@
 {
   "name": "postcss-beard-font-scale",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "PostCSS plugin for generating named font scales",
   "keywords": [
     "postcss",
