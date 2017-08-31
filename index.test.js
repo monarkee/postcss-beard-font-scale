@@ -20,6 +20,8 @@ it('it creates classes from a font-scale config', () => {
         },
         fontScale: {
             ft1: '13px',
+            ft2: '15px',
+            ft3: '18px',
         },
     })
 })

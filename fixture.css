@@ -1,13 +1,31 @@
 .ft1 {
     font-size: 13px
 }
+.ft2 {
+    font-size: 15px
+}
+.ft3 {
+    font-size: 18px
+}
 @media (min-width: 300px) {
     .sm-ft1 {
         font-size: 13px
+    }
+    .sm-ft2 {
+        font-size: 15px
+    }
+    .sm-ft3 {
+        font-size: 18px
     }
 }
 @media (min-width: 900px) {
     .lg-ft1 {
         font-size: 13px
+    }
+    .lg-ft2 {
+        font-size: 15px
+    }
+    .lg-ft3 {
+        font-size: 18px
     }
 }

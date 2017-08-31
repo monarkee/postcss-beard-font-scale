@@ -14,26 +14,28 @@ module.exports = postcss.plugin('postcss-beard-font-scale', function(opts) {
 
         root.append(rules)
 
-        var responsiveRules = _.flatMap(fontScale, function(
-            fontValue,
-            fontKey
+        var responsiveRules = _.flatMap(breakpoints, function(
+            breakpointValue,
+            breakpointKey
         ) {
-            return _.flatMap(breakpoints, function(value, key) {
-                return createResponsiveRule(key, value, fontKey, fontValue)
+            var breakpoint = createBreakpoint(breakpointValue)
+
+            var rules = _.map(fontScale, function(scaleValue, scaleKey) {
+                return createRule(`${breakpointKey}-${scaleKey}`, scaleValue)
             })
+
+            return breakpoint.append(rules)
         })
 
         return root.append(responsiveRules)
     }
 })
 
-function createResponsiveRule(prefix, query, selector, value) {
-    return postcss
-        .atRule({
-            name: 'media',
-            params: query,
-        })
-        .append(createRule(`${prefix}-${selector}`, value))
+function createBreakpoint(query) {
+    return postcss.atRule({
+        name: 'media',
+        params: query,
+    })
 }
 
 function createRule(selector, value) {
