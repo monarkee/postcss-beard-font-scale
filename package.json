@@ -1,0 +1,38 @@
+{
+  "name": "postcss-beard-font-scale",
+  "version": "0.0.0",
+  "description": "PostCSS plugin for generating named font scales",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "fonts",
+    "typography",
+    "style guide"
+  ],
+  "author": "David Hemphill <davidlee.hemphill@gmail.com>",
+  "license": "MIT",
+  "repository": "davidhemphill/postcss-beard-font-scale",
+  "bugs": {
+    "url": "https://github.com/davidhemphill/postcss-beard-font-scale/issues"
+  },
+  "homepage": "https://github.com/davidhemphill/postcss-beard-font-scale",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}

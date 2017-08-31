@@ -1,0 +1,13 @@
+.ft1 {
+    font-size: 13px
+}
+@media (min-width: 300px) {
+    .sm-ft1 {
+        font-size: 13px
+    }
+}
+@media (min-width: 900px) {
+    .lg-ft1 {
+        font-size: 13px
+    }
+}
